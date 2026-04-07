@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+MIDlet-1: Ksatria Online,/icon.png,com.silverknight.TemMidlet
+MIDlet-Vendor: TeaM
+MicroEdition-Configuration: CLDC-1.0
+MIDlet-Name: KsatriaOnline
+MIDlet-Version: 1.8.2
+MicroEdition-Profile: MIDP-2.0
+
