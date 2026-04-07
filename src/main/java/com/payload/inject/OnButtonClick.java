@@ -1,6 +1,8 @@
 package com.payload.inject;
 
 import com.payload.api.Notification;
+import com.payload.api.UiButton;
+import com.stub.com.silverknight.a;
 import com.payload.api.Control;
 
 public class OnButtonClick {
@@ -31,6 +33,16 @@ public class OnButtonClick {
                     System.out.println("3 Detik Berlalu!");
                 }
             }).start();
+        }
+
+        // klik x
+        if (keyCode == 120) {
+            UiButton.openAutoFungsi();
+        }
+
+        // klik c
+        if (keyCode == 99) {
+            UiButton.openKuda();
         }
     }
 }

@@ -23,6 +23,7 @@ public class GameEngine {
                             false);
                 });
 
+        GameEngineClass.method("q", "()Z").setToPublic();
         GameEngineClass.field("ao").setToPublic();
         GameEngineClass.save(outputPath);
     }
