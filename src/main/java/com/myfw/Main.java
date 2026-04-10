@@ -6,6 +6,7 @@ public class Main {
         try {
             com.myfw.patcher.MainCanvas.main();
             com.myfw.patcher.GameEngine.main();
+            com.myfw.patcher.MyCharacter.main();
         } catch (Exception e) {
             e.printStackTrace();
         }

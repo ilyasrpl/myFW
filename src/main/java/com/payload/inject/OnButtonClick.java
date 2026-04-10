@@ -2,6 +2,7 @@ package com.payload.inject;
 
 import com.payload.api.Notification;
 import com.payload.api.UiButton;
+import com.payload.api.test;
 import com.payload.api.Control;
 
 public class OnButtonClick {
@@ -42,6 +43,11 @@ public class OnButtonClick {
         // klik c
         if (keyCode == 99) {
             UiButton.openKuda();
+        }
+
+        // klik v
+        if (keyCode == 118) {
+            new MenuExample().render();
         }
     }
 }

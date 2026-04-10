@@ -34,6 +34,11 @@ public class MethodEditor {
         return this;
     }
 
+    public MethodEditor deleteFinal() {
+        node.access &= ~Opcodes.ACC_FINAL;
+        return this;
+    }
+
     public MethodEditor atStart(Consumer<MethodVisitor> generator) {
         MethodNode buffer = new MethodNode();
         generator.accept(buffer);

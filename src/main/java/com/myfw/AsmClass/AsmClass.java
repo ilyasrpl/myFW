@@ -40,11 +40,15 @@ public class AsmClass {
     }
 
     public void save(String outputPath) throws IOException {
-        ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
+        ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS);
         classNode.accept(cw);
         try (FileOutputStream os = new FileOutputStream(outputPath)) {
             os.write(cw.toByteArray());
         }
+    }
+
+    public void deleteFinal() {
+        classNode.access &= ~Opcodes.ACC_FINAL;
     }
 
 }
