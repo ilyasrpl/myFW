@@ -1,7 +1,6 @@
 package com.payload.inject;
 
 import com.payload.api.Notification;
-import com.payload.api.Test;
 import com.payload.api.UiButton;
 import com.payload.api.MyCharacter;
 import com.payload.api.Control;
