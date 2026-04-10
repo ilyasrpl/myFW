@@ -1,6 +1,7 @@
 package com.stub;
 
 public class cn extends p {
+    public static bq g;
 
     public final void a_(int var1, int var2) {
     }

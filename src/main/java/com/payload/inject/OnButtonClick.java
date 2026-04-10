@@ -2,6 +2,7 @@ package com.payload.inject;
 
 import com.payload.api.Notification;
 import com.payload.api.UiButton;
+import com.payload.api.MyCharacter;
 import com.payload.api.Control;
 
 public class OnButtonClick {
@@ -47,6 +48,12 @@ public class OnButtonClick {
         // klik v
         if (keyCode == 118) {
             new MenuExample().render();
+        }
+
+        // klik b
+        if (keyCode == 98) {
+            Notification.alert(
+                    String.valueOf(MyCharacter.getLocationX()) + ", " + String.valueOf(MyCharacter.getLocationY()));
         }
     }
 }
