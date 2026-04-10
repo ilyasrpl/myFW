@@ -33,6 +33,7 @@ val prepareTargetClass by tasks.registering(Copy::class) {
         include("com/silverknight/a.class")
         include("fu.class")
         include("cn.class")
+        include("cf.class")
     }
     into("tmp/mod")
 
@@ -79,6 +80,7 @@ val mergeResources by tasks.registering(Copy::class) {
         exclude("com/silverknight/a.class")
         exclude("fu.class")
         exclude("cn.class")
+        exclude("cf.class")
     }
     into("tmp/mod")
     

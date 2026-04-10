@@ -1,6 +1,7 @@
 package com.payload.inject;
 
 import com.payload.api.Notification;
+import com.payload.api.Test;
 import com.payload.api.UiButton;
 import com.payload.api.MyCharacter;
 import com.payload.api.Control;
@@ -55,5 +56,17 @@ public class OnButtonClick {
             Notification.alert(
                     String.valueOf(MyCharacter.getLocationX()) + ", " + String.valueOf(MyCharacter.getLocationY()));
         }
+
+        // klik n
+        if (keyCode == 110) {
+            MyCharacter.changeFocus();
+        }
+
+        // klik m
+        if (keyCode == 109) {
+            // contoh, di map tepi hutan menuju gua api
+            MyCharacter.moveTo(9, 31);
+        }
+
     }
 }
