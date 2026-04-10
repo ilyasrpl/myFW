@@ -2,7 +2,6 @@ package com.payload.inject;
 
 import com.payload.api.Notification;
 import com.payload.api.UiButton;
-import com.payload.api.test;
 import com.payload.api.Control;
 
 public class OnButtonClick {
