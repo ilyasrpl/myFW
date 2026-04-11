@@ -67,5 +67,20 @@ public class OnButtonClick {
             MyCharacter.moveTo(9, 31);
         }
 
+        // klik a
+        if (keyCode == 97) {
+            MyCharacter.useSkill(0);
+        }
+
+        // klik s
+        if (keyCode == 115) {
+            MyCharacter.useSkill(1);
+        }
+
+        // klik d
+        if (keyCode == 100) {
+            MyCharacter.useSkill(2);
+        }
+
     }
 }

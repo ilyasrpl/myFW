@@ -5,4 +5,8 @@ public class bq extends fa {
 
     public void p() {
     }
+
+    public void a(int i, boolean j) {
+    }
+
 }

@@ -19,4 +19,8 @@ public class MyCharacter {
     public static void moveTo(int x, int y) {
         cn.g.cN = cn.b().a(x, y, getLocationX(), getLocationY(), 100);
     }
+
+    public static void useSkill(int skillSlot) {
+        cn.g.a(skillSlot, false);
+    }
 }
