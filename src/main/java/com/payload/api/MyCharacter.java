@@ -12,6 +12,17 @@ public class MyCharacter {
         return cn.g.aZ / cs.l;
     }
 
+    public static Character getFocus() {
+        if (cn.i == null) {
+            return new Character();
+        }
+        return new Character(cn.i);
+    }
+
+    public static boolean canTalk() {
+        return cn.g.y();
+    }
+
     public static void changeFocus() {
         cn.r.f(3);
     }

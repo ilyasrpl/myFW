@@ -9,4 +9,8 @@ public class bq extends fa {
     public void a(int i, boolean j) {
     }
 
+    public boolean y() {
+        return false;
+    }
+
 }

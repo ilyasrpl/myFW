@@ -14,4 +14,8 @@ public class Notification {
     public static void show(String msg) {
         fu.c(msg);
     }
+
+    public static void bigNotif(String msg, String title) {
+        fu.b(msg, title);
+    }
 }

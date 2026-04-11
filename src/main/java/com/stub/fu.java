@@ -46,4 +46,7 @@ public class fu {
         // Stub method for fu.c
         // for showNotification
     }
+
+    static public void b(String msg, String title) {
+    }
 }

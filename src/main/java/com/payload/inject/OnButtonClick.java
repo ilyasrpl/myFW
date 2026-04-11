@@ -4,6 +4,7 @@ import com.payload.api.Notification;
 import com.payload.api.UiButton;
 import com.payload.api.MyCharacter;
 import com.payload.api.Control;
+import com.payload.api.Character;
 
 public class OnButtonClick {
     static public void onClick(int keyCode) throws InterruptedException {
@@ -69,17 +70,22 @@ public class OnButtonClick {
 
         // klik a
         if (keyCode == 97) {
+            // contoh, pakai skill di slot 0, slot arg 0-4
             MyCharacter.useSkill(0);
         }
 
         // klik s
         if (keyCode == 115) {
-            MyCharacter.useSkill(1);
+            Character character = MyCharacter.getFocus();
+            Notification.bigNotif("Focus: " + character.getName() +
+                    "\nLevel: " + character.getLevel() +
+                    "\nCurrent HP: " + character.CurrentHP() +
+                    "\nMax HP: " + character.MaxHP(), "focus");
         }
 
         // klik d
         if (keyCode == 100) {
-            MyCharacter.useSkill(2);
+            Notification.alert("Can Talk: " + MyCharacter.canTalk());
         }
 
     }
