@@ -88,5 +88,10 @@ public class OnButtonClick {
             Notification.alert("Can Talk: " + MyCharacter.canTalk());
         }
 
+        // klik f
+        if (keyCode == 102) {
+            new TextFieldExample().render("Masukkan sesuatu:");
+        }
+
     }
 }

@@ -1,5 +1,5 @@
 package com.stub;
 
-public class da {
+public class da implements cg {
 
 }
