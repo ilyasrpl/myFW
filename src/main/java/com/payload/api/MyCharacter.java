@@ -2,6 +2,7 @@ package com.payload.api;
 
 import com.stub.cn;
 import com.stub.cs;
+import com.stub.fu;
 
 public class MyCharacter {
     public static int getLocationX() {
@@ -28,7 +29,11 @@ public class MyCharacter {
     }
 
     public static void moveTo(int x, int y) {
-        cn.g.cN = cn.b().a(x, y, getLocationX(), getLocationY(), 100);
+        int mapWidth = fu.q.e;
+        int mapHeight = fu.q.f;
+        if (mapWidth >= getLocationX() && mapHeight >= getLocationY()) {
+            cn.g.cN = cn.b().a(x, y, getLocationX(), getLocationY(), 100);
+        }
     }
 
     public static void useSkill(int skillSlot) {
