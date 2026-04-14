@@ -8,6 +8,7 @@ public class Main {
             com.myfw.patcher.GameEngine.main();
             com.myfw.patcher.MyCharacter.main();
             com.myfw.patcher.ButtonMenu.main();
+            com.myfw.patcher.MsgFromServer.main();
         } catch (Exception e) {
             e.printStackTrace();
         }

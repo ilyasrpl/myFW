@@ -19,6 +19,20 @@ public class MethodEditor {
         return this;
     }
 
+    public MethodEditor clear() {
+        node.instructions.clear();
+        if (node.tryCatchBlocks != null) {
+            node.tryCatchBlocks.clear();
+        }
+        if (node.localVariables != null) {
+            node.localVariables.clear();
+        }
+        node.maxStack = 0;
+        node.maxLocals = 0;
+
+        return this;
+    }
+
     public MethodEditor afterCall(String owner, String name, Consumer<MethodVisitor> generator) {
         InsnList instructions = node.instructions;
         for (AbstractInsnNode insn : instructions.toArray()) {

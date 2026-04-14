@@ -7,4 +7,5 @@ public class fa {
     public short by;
     public int br;
     public int bs;
+    public long bC;
 }

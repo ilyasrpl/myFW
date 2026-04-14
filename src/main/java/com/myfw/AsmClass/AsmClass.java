@@ -47,6 +47,23 @@ public class AsmClass {
         }
     }
 
+    public void save(String outputPath, int flags) throws IOException {
+        ClassWriter cw = new ClassWriter(flags) {
+            @Override
+            protected String getCommonSuperClass(String type1, String type2) {
+                try {
+                    return super.getCommonSuperClass(type1, type2);
+                } catch (Exception e) {
+                    return "java/lang/Object";
+                }
+            }
+        };
+        classNode.accept(cw);
+        try (FileOutputStream os = new FileOutputStream(outputPath)) {
+            os.write(cw.toByteArray());
+        }
+    }
+
     public void deleteFinal() {
         classNode.access &= ~Opcodes.ACC_FINAL;
     }

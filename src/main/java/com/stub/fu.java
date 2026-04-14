@@ -3,6 +3,7 @@
 package com.stub;
 
 public class fu {
+    public static eu g;
     public static cs q;
     public static da t;
     public static da s;

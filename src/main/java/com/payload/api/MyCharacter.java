@@ -5,6 +5,10 @@ import com.stub.cs;
 import com.stub.fu;
 
 public class MyCharacter {
+    public static long getGold() {
+        return cn.g.bC;
+    }
+
     public static int getLocationX() {
         return cn.g.aY / cs.l;
     }
