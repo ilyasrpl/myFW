@@ -31,7 +31,7 @@ public class MyCharacter {
     public static void moveTo(int x, int y) {
         int mapWidth = fu.q.e;
         int mapHeight = fu.q.f;
-        if (mapWidth >= getLocationX() && mapHeight >= getLocationY()) {
+        if (mapWidth >= x && mapHeight >= y) {
             cn.g.cN = cn.b().a(x, y, getLocationX(), getLocationY(), 100);
         }
     }
