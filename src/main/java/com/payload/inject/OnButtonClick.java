@@ -93,5 +93,10 @@ public class OnButtonClick {
             new TextFieldExample().render("Masukkan sesuatu:");
         }
 
+        // klik g
+        if (keyCode == 103) {
+            new CharacterList().render();
+        }
+
     }
 }

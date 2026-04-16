@@ -51,4 +51,9 @@ public class fu {
 
     static public void b(String msg, String title) {
     }
+
+    static public void a(String msg, bt button) {
+        // Stub method for fu.a
+        // for alert with custom button
+    }
 }

@@ -4,6 +4,7 @@ public class cn extends p {
     public static bq g;
     public static cf r;
     public static fa i;
+    public static et j = new et();
 
     public static cn b() {
         return new cn();

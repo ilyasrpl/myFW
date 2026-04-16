@@ -28,4 +28,12 @@ public class Character {
     public int MaxHP() {
         return character.bs;
     }
+
+    public int getX() {
+        return this.character.aY / 24;
+    }
+
+    public int getY() {
+        return this.character.aZ / 24;
+    }
 }

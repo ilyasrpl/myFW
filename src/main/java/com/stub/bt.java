@@ -8,4 +8,10 @@ public class bt {
 
     public bt(String s, int a, cg b) {
     }
+
+    public bt(String s, int a, int c, cg d) {
+    }
+
+    public void a(ce a, int b, int c) {
+    }
 }
