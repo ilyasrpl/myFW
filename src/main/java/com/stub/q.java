@@ -8,4 +8,10 @@ public class q {
     public void a(String a, String b) {
     }
 
+    public void a(byte npcId) {
+    }
+
+    public void d(byte zone) {
+    }
+
 }

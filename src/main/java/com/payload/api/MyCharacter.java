@@ -3,6 +3,7 @@ package com.payload.api;
 import com.stub.cn;
 import com.stub.cs;
 import com.stub.fu;
+import com.stub.q;
 
 public class MyCharacter {
     public static long getGold() {
@@ -42,5 +43,15 @@ public class MyCharacter {
 
     public static void useSkill(int skillSlot) {
         cn.g.a(skillSlot, false);
+    }
+
+    public static void talkTo(byte npcId) {
+        q.a().a(npcId);
+    }
+
+    public static void changeZone(byte zone) {
+        zone = (byte) (zone - 1);
+        talkTo((byte) -46);
+        q.a().d(zone);
     }
 }

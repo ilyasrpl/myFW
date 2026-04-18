@@ -19,5 +19,15 @@ public class onMessage {
             int y = Integer.parseInt(parts[2]);
             MyCharacter.moveTo(x, y);
         }
+
+        if ("talk".equals(parts[0])) {
+            byte idNpc = Byte.parseByte(parts[1]);
+            MyCharacter.talkTo(idNpc);
+        }
+
+        if ("zone".equals(parts[0])) {
+            byte zone = Byte.parseByte(parts[1]);
+            MyCharacter.changeZone(zone);
+        }
     }
 }
