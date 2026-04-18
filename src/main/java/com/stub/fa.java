@@ -8,4 +8,6 @@ public class fa {
     public int br;
     public int bs;
     public long bC;
+    public byte bx;
+    public int ct;
 }

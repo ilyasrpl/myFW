@@ -23,12 +23,21 @@ public class CharacterList extends BaseMenu {
     }
 
     public void onMenuSelected(int idChar) {
-        Character[] characters = Map.getAllCharacters();
-        Character character = characters[idChar];
-        String msg = "level : " + String.valueOf(character.getLevel()) + "\n"
-                + "loc X : " + String.valueOf(character.getX()) + "\n"
-                + "loc Y : " + String.valueOf(character.getY()) + "\n"
-                + "HP    : " + String.valueOf(character.CurrentHP()) + "/" + String.valueOf(character.MaxHP());
+        Character character = Map.getAllCharacters()[idChar];
+        String id = String.valueOf(character.getId());
+        String level = String.valueOf(character.getLevel());
+        String locX = String.valueOf(character.getX());
+        String locY = String.valueOf(character.getY());
+        String currentHP = String.valueOf(character.CurrentHP());
+        String maxHP = String.valueOf(character.MaxHP());
+        String role = String.valueOf(character.getRole());
+
+        String msg = "id    : " + id + "\n"
+                + "level : " + level + "\n"
+                + "loc X : " + locX + "\n"
+                + "loc Y : " + locY + "\n"
+                + "HP    : " + currentHP + "/" + maxHP + "\n"
+                + "role  : " + role;
         Notification.bigNotif(msg, character.getName());
     }
 }
