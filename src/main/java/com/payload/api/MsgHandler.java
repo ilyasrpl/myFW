@@ -35,10 +35,10 @@ public class MsgHandler {
 
     public static void menuSpawn(ep var0) {
         try {
+            ActiveMenu.menus.d();
             short var1 = var0.b().readShort();
             byte var2 = var0.b().readByte();
             byte var3 = var0.b().readByte();
-            ActiveMenu.reset();
             et var4 = new et("ReadMessenge cmd");
             for (int var5 = 0; var5 < var3; ++var5) {
                 String menu = var0.b().readUTF();

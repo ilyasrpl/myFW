@@ -34,6 +34,7 @@ public class onMessage {
         }
 
         if ("tele".equals(parts[0])) {
+            ActiveMenu.reset();
             MyCharacter.talkTo((byte) 246);
             new Thread(new Runnable() {
                 public void run() {

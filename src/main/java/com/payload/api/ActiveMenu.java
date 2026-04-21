@@ -10,6 +10,6 @@ public class ActiveMenu {
     }
 
     public static void reset() {
-        menus = new ListMenu();
+        menus.d();
     }
 }
