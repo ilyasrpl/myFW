@@ -49,6 +49,10 @@ public class MyCharacter {
         q.a().a(npcId);
     }
 
+    public static void talkTo(short npcId, byte arg1, byte arg2) {
+        q.a().b(npcId, arg1, arg2);
+    }
+
     public static void changeZone(byte zone) {
         zone = (byte) (zone - 1);
         talkTo((byte) -46);

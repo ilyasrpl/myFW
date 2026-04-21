@@ -14,4 +14,7 @@ public class q {
     public void d(byte zone) {
     }
 
+    public void b(short s, byte i, byte byte1) {
+    }
+
 }

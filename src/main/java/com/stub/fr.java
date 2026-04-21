@@ -11,4 +11,9 @@ public class fr {
 
     public final void a(int var1, int var2) {
     }
+
+    public void a(et var4, int var2, int var22, int var1, String var8) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'a'");
+    }
 }

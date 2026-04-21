@@ -24,6 +24,17 @@ public class MsgFromServer {
                             false);
                     mv.visitInsn(Opcodes.RETURN);
                 });
+        msgClass.method("v", "(Lep;)V")
+                .clear()
+                .atStart(mv -> {
+                    mv.visitVarInsn(Opcodes.ALOAD, 0);
+                    mv.visitMethodInsn(Opcodes.INVOKESTATIC,
+                            "com/payload/api/MsgHandler",
+                            "menuSpawn",
+                            "(Lep;)V",
+                            false);
+                    mv.visitInsn(Opcodes.RETURN);
+                });
 
         msgClass.save(outputPath, ClassWriter.COMPUTE_MAXS | ClassWriter.COMPUTE_FRAMES);
     }
