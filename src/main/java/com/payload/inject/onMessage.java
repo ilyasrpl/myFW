@@ -13,7 +13,6 @@ public class onMessage {
         String[] parts = msg.trim().split("\\s+");
 
         if ("gold".equals(parts[0])) {
-            Notification.alert(parts[0]);
             MsgHandler.send(nick, Long.toString(MyCharacter.getGold()));
         }
 
