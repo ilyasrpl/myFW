@@ -14,7 +14,7 @@ public class onMessage {
         if (nick.equals("Pesan Ke")) {
             MyCharacter.isWaitingForResponse = true;
             try {
-                Thread.sleep(11000L);
+                Thread.sleep(10500L);
                 MyCharacter.revive();
             } catch (InterruptedException e) {
             }

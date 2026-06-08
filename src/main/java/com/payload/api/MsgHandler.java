@@ -41,6 +41,13 @@ public class MsgHandler {
                 var4.a(var6);
             }
             String var8 = var0.b().readUTF();
+
+            // for revival response
+            if (var4.c() == 2 && ((bt) var4.a(0)).a.equals("Gunakan revival")) {
+                q.a().b(var1, var2, (byte) 0);
+                return;
+            }
+
             fu.p.a(ActiveMenu.menus, 2, var2, var1, var8);
         } catch (Exception var7) {
             Notification.alert(var7.getMessage());
