@@ -1,5 +1,5 @@
 package com.stub;
 
-public class p implements cg {
+public abstract class p implements cg {
 
 }

@@ -17,4 +17,9 @@ public class q {
     public void b(short s, byte i, byte byte1) {
     }
 
+    public void b(byte i) {
+    }
+
+    public void c(short s, byte i, byte byte1) {
+    }
 }

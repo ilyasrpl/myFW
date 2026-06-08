@@ -10,6 +10,17 @@ public class onMessage {
 
     public static void msg(String nick, String msg) {
 
+        // for auto revive
+        if (nick.equals("Pesan Ke")) {
+            MyCharacter.isWaitingForResponse = true;
+            try {
+                Thread.sleep(11000L);
+                MyCharacter.revive();
+            } catch (InterruptedException e) {
+            }
+            return;
+        }
+
         String[] parts = msg.trim().split("\\s+");
 
         if ("gold".equals(parts[0])) {

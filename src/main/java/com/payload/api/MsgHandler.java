@@ -1,13 +1,7 @@
 package com.payload.api;
 
 import com.payload.inject.onMessage;
-import com.stub.bt;
-import com.stub.df;
-import com.stub.dl;
-import com.stub.ep;
-import com.stub.et;
-import com.stub.fu;
-import com.stub.q;
+import com.stub.*;
 
 public class MsgHandler {
 
@@ -50,6 +44,29 @@ public class MsgHandler {
             fu.p.a(ActiveMenu.menus, 2, var2, var1, var8);
         } catch (Exception var7) {
             Notification.alert(var7.getMessage());
+        }
+    }
+
+    public static void modalSpawn(er var0, ep var1) {
+        try {
+            fu.j();
+            var0.b = var1.b().readShort();
+            var0.c = var1.b().readByte();
+            String var4 = var1.b().readUTF();
+
+            // for revive response
+            if (MyCharacter.isWaitingForResponse) {
+                MyCharacter.isWaitingForResponse = false;
+                q.a().c(var0.b, var0.c, (byte) 1);
+                return;
+            }
+
+            et var2 = new et("ReadMessenge vec4");
+            var2.a((Object) new bt("Ok", 2, 1, var0));
+            var2.a(new bt("Batal", 2, 0, var0));
+            fu.a(var4, var2);
+        } catch (Exception var5) {
+            Notification.alert(var5.getMessage());
         }
     }
 

@@ -6,6 +6,8 @@ import com.stub.fu;
 import com.stub.q;
 
 public class MyCharacter {
+    public static boolean isWaitingForResponse = false;
+
     public static long getGold() {
         return cn.g.bC;
     }
@@ -57,5 +59,9 @@ public class MyCharacter {
         zone = (byte) (zone - 1);
         talkTo((byte) -46);
         q.a().d(zone);
+    }
+
+    public static void revive() {
+        q.a().b((byte) 1);
     }
 }
