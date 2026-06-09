@@ -27,6 +27,10 @@ public class MyCharacter {
         return new Character(cn.i);
     }
 
+    public static Character getMe() {
+        return new Character(cn.g);
+    }
+
     public static boolean canTalk() {
         return cn.g.y();
     }
@@ -63,5 +67,20 @@ public class MyCharacter {
 
     public static void revive() {
         q.a().b((byte) 1);
+    }
+
+    public static void attackMonster() {
+        new Thread(new Runnable() {
+            public void run() {
+                while (getFocus().getRole() != 1) {
+                    changeFocus();
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                    }
+                }
+                useSkill(0);
+            }
+        }).start();
     }
 }

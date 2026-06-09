@@ -6,5 +6,6 @@ public class cs {
     public static int l;
     public static int[] o;
     public static byte v;
+    public static byte w;
 
 }

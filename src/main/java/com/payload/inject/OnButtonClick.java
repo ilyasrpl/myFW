@@ -80,7 +80,8 @@ public class OnButtonClick {
             Notification.bigNotif("Focus: " + character.getName() +
                     "\nLevel: " + character.getLevel() +
                     "\nCurrent HP: " + character.CurrentHP() +
-                    "\nMax HP: " + character.MaxHP(), "focus");
+                    "\nMax HP: " + character.MaxHP() +
+                    "\nRole: " + character.getRole(), "focus");
         }
 
         // klik d
@@ -96,6 +97,21 @@ public class OnButtonClick {
         // klik g
         if (keyCode == 103) {
             new CharacterList().render();
+        }
+
+        // klik h
+        if (keyCode == 104) {
+            MyCharacter.attackMonster();
+        }
+
+        // klik j
+        if (keyCode == 106) {
+            Character character = MyCharacter.getMe();
+            Notification.bigNotif("Focus: " + character.getName() +
+                    "\nLevel: " + character.getLevel() +
+                    "\nCurrent HP: " + character.CurrentHP() +
+                    "\nMax HP: " + character.MaxHP() +
+                    "\nRole: " + character.getRole(), "focus");
         }
 
     }

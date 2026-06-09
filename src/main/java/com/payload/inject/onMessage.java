@@ -11,15 +11,19 @@ public class onMessage {
     public static void msg(String nick, String msg) {
 
         // for auto revive
-        if (nick.equals("Pesan Ke")) {
-            MyCharacter.isWaitingForResponse = true;
-            try {
-                Thread.sleep(10500L);
-                MyCharacter.revive();
-            } catch (InterruptedException e) {
-            }
-            return;
-        }
+        // if (nick.equals("Pesan Ke")) {
+        // new Thread(() -> {
+        // MyCharacter.isWaitingForResponse = true;
+        // try {
+        // Thread.sleep(10500L);
+        // MyCharacter.revive();
+        // Thread.sleep(4000L);
+        // MyCharacter.attackMonster();
+        // } catch (InterruptedException e) {
+        // }
+        // }).start();
+        // return;
+        // }
 
         String[] parts = msg.trim().split("\\s+");
 

@@ -80,4 +80,27 @@ public class MsgHandler {
     public static void send(String nickname, String msg) {
         q.a().a(nickname, msg);
     }
+
+    public static ep diePlayer(ep var0) {
+        try {
+            new Thread(new Runnable() {
+                public void run() {
+                    try {
+                        Thread.sleep(1500);
+                        if (MyCharacter.getMe().CurrentHP() == 0) {
+                            Thread.sleep(10000);
+                            MyCharacter.isWaitingForResponse = true;
+                            MyCharacter.revive();
+                            Thread.sleep(2000);
+                            MyCharacter.attackMonster();
+                        }
+                    } catch (Exception e) {
+                    }
+                }
+            }).start();
+            return var0;
+        } catch (Exception var2) {
+            return var0;
+        }
+    }
 }

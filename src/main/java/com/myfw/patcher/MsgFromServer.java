@@ -41,6 +41,17 @@ public class MsgFromServer {
                     mv.visitInsn(Opcodes.RETURN);
                 });
 
+        msgClass.method("P", "(Lep;)V")
+                .atStart(mv -> {
+                    mv.visitVarInsn(Opcodes.ALOAD, 0);
+                    mv.visitMethodInsn(Opcodes.INVOKESTATIC,
+                            "com/payload/api/MsgHandler",
+                            "diePlayer",
+                            "(Lep;)Lep;",
+                            false);
+                    mv.visitVarInsn(Opcodes.ASTORE, 0);
+                });
+
         msgClass.method("al", "(Lep;)V")
                 .clear()
                 .atStart(mv -> {

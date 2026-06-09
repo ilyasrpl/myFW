@@ -3,6 +3,8 @@ package com.stub;
 public class bq extends fa {
     public short[] cN;
 
+    public bt c;
+
     public void p() {
     }
 

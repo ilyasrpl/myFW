@@ -42,8 +42,8 @@ public class Character {
     }
 
     public byte getRole() {
-        // 3 = player, 0 nonplayer ?
-        return this.character.bx;
+        // 0 = player, 1 = monster, 2 = npc
+        return this.character.cu;
     }
 
     // bug, idk why
