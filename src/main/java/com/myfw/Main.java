@@ -9,6 +9,7 @@ public class Main {
             com.myfw.patcher.MyCharacter.main();
             com.myfw.patcher.ButtonMenu.main();
             com.myfw.patcher.MsgFromServer.main();
+            com.myfw.patcher.Server.main();
         } catch (Exception e) {
             e.printStackTrace();
         }

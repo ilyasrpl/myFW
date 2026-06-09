@@ -12,6 +12,7 @@ public class fu {
     public static fr p;
     public static cn c;
     public static long ak;
+    public static String P;
 
     public static boolean q() {
         // Stub method for fu.q

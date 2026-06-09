@@ -83,4 +83,16 @@ public class MyCharacter {
             }
         }).start();
     }
+
+    public static void feedingPetWithEquip(int itemId) {
+        q.a().a((short) 5, (short) itemId, (byte) 3, (byte) 1);
+    }
+
+    public static void feedingPetWithPotion(int potionId) {
+        q.a().a((short) 5, (short) potionId, (byte) 4, (byte) 1);
+    }
+
+    public static void openPetInfo() {
+        q.a().c((byte) 2, (short) 5);
+    }
 }

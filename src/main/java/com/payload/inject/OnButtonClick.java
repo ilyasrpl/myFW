@@ -114,5 +114,10 @@ public class OnButtonClick {
                     "\nRole: " + character.getRole(), "focus");
         }
 
+        // klik k
+        if (keyCode == 107) {
+            MyCharacter.openPetInfo();
+        }
+
     }
 }

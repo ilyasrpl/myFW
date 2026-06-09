@@ -35,6 +35,7 @@ val prepareTargetClass by tasks.registering(Copy::class) {
         include("cn.class")
         include("cf.class")
         include("er.class")
+        include("f.class")
     }
     into("tmp/mod")
 
@@ -83,7 +84,7 @@ val mergeResources by tasks.registering(Copy::class) {
         exclude("cn.class")
         exclude("cf.class")
         exclude("er.class")
-    }
+        exclude("f.class")}
     into("tmp/mod")
     
     dependsOn(runStubRemover)
