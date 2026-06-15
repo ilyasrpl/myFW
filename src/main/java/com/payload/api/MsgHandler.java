@@ -103,4 +103,12 @@ public class MsgHandler {
             return var0;
         }
     }
+
+    public static ep alert(ep var0) {
+        if (ServerHandler.isWaitingPetResponse) {
+            ServerHandler.isWaitingPetResponse = false;
+            return new ep((byte) 1);
+        }
+        return var0;
+    }
 }

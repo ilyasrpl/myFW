@@ -4,16 +4,14 @@ import com.payload.api.Notification;
 import com.payload.api.UiButton;
 import com.payload.api.MyCharacter;
 import com.payload.api.Control;
+import com.payload.api.Inventory;
+import com.payload.api.Item;
 import com.payload.api.Character;
 
 public class OnButtonClick {
     static public void onClick(int keyCode) throws InterruptedException {
         if (keyCode == 113) {
             Notification.log("Button q clicked!");
-        }
-
-        if (keyCode == 119) {
-            Notification.alert("Button w clicked!");
         }
 
         if (keyCode == 101) {
@@ -117,6 +115,26 @@ public class OnButtonClick {
         // klik k
         if (keyCode == 107) {
             MyCharacter.openPetInfo();
+        }
+
+        // klik l
+        if (keyCode == 108) {
+            Item[] items = Inventory.getMyItems();
+            StringBuilder itemList = new StringBuilder();
+            for (int i = 0; i < items.length; i++) {
+                itemList
+                        .append(items[i].getName()).append("\n")
+                        .append("keyCode: ").append(items[i].getId()).append("\n")
+                        .append("Type: ").append(items[i].getType()).append("\n")
+                        .append("Color: ").append(items[i].getColor()).append("\n")
+                        .append("Upgrade Level: ").append(items[i].getUpLevel()).append("\n\n");
+            }
+            Notification.bigNotif(itemList.toString(), "Item List");
+        }
+
+        // klik w
+        if (keyCode == 119) {
+
         }
 
     }
